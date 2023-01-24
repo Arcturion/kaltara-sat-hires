@@ -26,7 +26,6 @@ for alamat in alamats:
     alamat_target = alamat
     print(alamat_target)
     ftp.retrbinary("RETR " + alamat_target ,open(alamat_target, 'wb').write)
-    #ftp.retrbinary("RETR " + alamat_target ,open("/" + ""+alamat_target, 'wb').write)
 ftp.close()
 
 files = glob.glob(r'*DAT.bz2')
